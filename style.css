@@ -28,5 +28,23 @@ button {
   border-radius: 3px;
   border: none;
   color: white;
+  cursor: pointer;
   padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+
+button:active {
+  background-color: crimson;
+}
+
+ul {
+  margin-top: 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+}
+
+ul li {
+  font-size: 1.4rem;
 }
