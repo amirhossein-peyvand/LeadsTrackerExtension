@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 1rem;
+}
+
+input {
+  border-radius: 3px;
+  border: 2px solid #5f9341;
+  display: block;
+  margin-bottom: 1.1rem;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: #5f9341;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+}
