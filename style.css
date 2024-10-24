@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  min-width: 40rem;
   padding: 1rem;
 }
 
@@ -21,6 +22,10 @@ input {
   outline: none;
   padding: 1rem;
   width: 100%;
+}
+
+input:focus {
+  border-color: crimson;
 }
 
 button {
@@ -38,13 +43,20 @@ button:active {
 }
 
 ul {
-  margin-top: 2rem;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  margin-top: 2rem;
   row-gap: 0.2rem;
 }
 
-ul li {
+ul li a {
+  color: #5f9341;
   font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+ul li a:active {
+  color: crimson;
 }
