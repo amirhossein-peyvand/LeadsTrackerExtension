@@ -4,6 +4,7 @@ const inputEl = document.getElementById("input-el");
 const saveInputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
+const saveTabBtn = document.getElementById("save-tab-btn");
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
@@ -24,6 +25,14 @@ function render(leads) {
   `;
   ulEl.innerHTML = listItems;
 }
+
+saveTabBtn.addEventListener("click", () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
+});
 
 saveInputBtn.addEventListener("click", () => {
   myLeads.push(inputEl.value);
